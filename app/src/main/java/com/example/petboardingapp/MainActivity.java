@@ -49,21 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         colRef = db.collection("firebasehelloworld");
         docRef = colRef.document("ycONutzZgAwGr2MRMKd8");
-//        docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot snapshot, @Nullable FirebaseFirestoreException e) {
-//                if (e != null){
-//                    return;
-//                }
-//
-//                if (snapshot != null && snapshot.exists()) {
-//
-//                    Message msg = snapshot.toObject(Message.class);
-//                    tvMessage.setText(msg.getText());
-//                    tvPriority.setText("Priority is " + msg.getPriority());
-//                }
-//            }
-//        });
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,15 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 docRef.set(msg);
             }
         });
-
-
-    }
-
-    private void btnSendOnClick(View v) throws ParseException {
-//        String text = etMessage.getText().toString();
-//        docRef.update("text", text, "color", "red");
-
-
 
     }
 }
